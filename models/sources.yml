@@ -1,0 +1,7 @@
+sources:
+  - name: raw
+    database: RAW  
+    schema: DEV  
+    tables:
+      - name: GREEN_DATA_RAW
+      - name: YELLOW_DATA_RAW

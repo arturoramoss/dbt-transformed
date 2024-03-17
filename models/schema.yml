@@ -1,0 +1,15 @@
+
+version: 2
+
+models:
+  - name: green_taxi_data
+    description: "A starter dbt model"
+
+  - name: yellow_taxi_data
+    description: "A starter dbt model"
+
+  - name: taxi_data_union
+    description: "A starter dbt model"
+    config:
+      materialized: table
+    

@@ -1,0 +1,19 @@
+# https://docs.getdbt.com/docs/core/connect-data-platform/profiles.yml
+
+transformed:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+
+      # User/password auth
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+
+      role: ACCOUNTADMIN
+      database: TRANSFORMED
+      warehouse: DATA_WH
+      schema: DEV
+      threads: 2
+      client_session_keep_alive: False
